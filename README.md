@@ -24,3 +24,26 @@
 > 我们就以页面总宽为7.5rem为标准，那么在布局视口中，也就是页面总宽为375px下，font-size值应该是多少？很简单：
 ***
 > 这样，无论在什么设备下，我们页面的总宽度都是7.5rem，所以我们直接在设计图上测量px单位的尺寸，然后除以100转换成rem单位后直接使用就可以了，比如，在iPhone6设计图中测量一个元素的尺寸为200px，那么转换成rem单位就是 200 / 100 = 2rem，因为在不同设备下我们动态设置了html标签的font-size值，所以不同设备下相同的rem值对应的像素值是不同的，这样就实现了在不同设备下等比缩放。我们修改html代码如下：
+
+***
+### 文字字体大小是不要换算成rem做单位的，而是使用媒体查询来进行动态设置
+#### CSS代码段
+<code>
+@media screen and (max-width: 321px) {
+    body {
+        font-size:16px
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width:400px) {
+    body {
+        font-size:17px
+    }
+}
+
+@media screen and (min-width: 400px) {
+    body {
+        font-size:19px
+    }
+}
+</code>
