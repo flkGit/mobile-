@@ -2,15 +2,18 @@
 
 
 ### HTML模板
+<br>
 <code>
 	meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
 </code>
+<br>
 <code>
 	<script>
 	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
 	</script>
 </code>
-
+<br>
+<br>
 > 我们知道：
 > 设备像素 = 设计图尺寸 = 750px
 > 布局视口 = 375px
